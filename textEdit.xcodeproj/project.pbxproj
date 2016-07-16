@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE7E462D1C152BD0006A40F2 /* MyDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7E462C1C152BD0006A40F2 /* MyDocument.swift */; };
 		BEF890131C0C0D2C0009700B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF890121C0C0D2C0009700B /* AppDelegate.swift */; };
 		BEF890151C0C0D2C0009700B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF890141C0C0D2C0009700B /* ViewController.swift */; };
 		BEF890181C0C0D2C0009700B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF890161C0C0D2C0009700B /* Main.storyboard */; };
 		BEF8901A1C0C0D2D0009700B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEF890191C0C0D2D0009700B /* Assets.xcassets */; };
 		BEF8901D1C0C0D2D0009700B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEF8901B1C0C0D2D0009700B /* LaunchScreen.storyboard */; };
+		BEF890261C0C128C0009700B /* EditToolBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF890241C0C128C0009700B /* EditToolBarViewController.swift */; };
+		BEF890271C0C128C0009700B /* EditToolBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEF890251C0C128C0009700B /* EditToolBarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE7E462C1C152BD0006A40F2 /* MyDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDocument.swift; sourceTree = "<group>"; };
 		BEF8900F1C0C0D2C0009700B /* textEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF890121C0C0D2C0009700B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEF890141C0C0D2C0009700B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		BEF890191C0C0D2D0009700B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEF8901C1C0C0D2D0009700B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEF8901E1C0C0D2D0009700B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF890241C0C128C0009700B /* EditToolBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditToolBarViewController.swift; sourceTree = "<group>"; };
+		BEF890251C0C128C0009700B /* EditToolBarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditToolBarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				BEF890191C0C0D2D0009700B /* Assets.xcassets */,
 				BEF8901B1C0C0D2D0009700B /* LaunchScreen.storyboard */,
 				BEF8901E1C0C0D2D0009700B /* Info.plist */,
+				BEF890241C0C128C0009700B /* EditToolBarViewController.swift */,
+				BEF890251C0C128C0009700B /* EditToolBarViewController.xib */,
+				BE7E462C1C152BD0006A40F2 /* MyDocument.swift */,
 			);
 			path = textEdit;
 			sourceTree = "<group>";
@@ -125,6 +134,7 @@
 			files = (
 				BEF8901D1C0C0D2D0009700B /* LaunchScreen.storyboard in Resources */,
 				BEF8901A1C0C0D2D0009700B /* Assets.xcassets in Resources */,
+				BEF890271C0C128C0009700B /* EditToolBarViewController.xib in Resources */,
 				BEF890181C0C0D2C0009700B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7E462D1C152BD0006A40F2 /* MyDocument.swift in Sources */,
 				BEF890151C0C0D2C0009700B /* ViewController.swift in Sources */,
 				BEF890131C0C0D2C0009700B /* AppDelegate.swift in Sources */,
+				BEF890261C0C128C0009700B /* EditToolBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,7 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -237,7 +249,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -285,6 +297,7 @@
 				BEF890231C0C0D2D0009700B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

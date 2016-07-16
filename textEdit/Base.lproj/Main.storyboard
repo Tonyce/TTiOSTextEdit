@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="textEdit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObO-oQ-ROR">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-36-BlG">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8AA-cd-ynE">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="128"/>
+                                                <color key="backgroundColor" red="0.71588991189999995" green="1" blue="0.69537296660000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="coP-iZ-Fzu"/>
+                                                </constraints>
+                                            </view>
+                                            <textView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bI3-34-lhJ">
+                                                <rect key="frame" x="0.0" y="138" width="600" height="442"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8AA-cd-ynE" secondAttribute="trailing" id="1aB-cC-17K"/>
+                                            <constraint firstAttribute="trailing" secondItem="bI3-34-lhJ" secondAttribute="trailing" id="DFY-tH-zpk"/>
+                                            <constraint firstItem="bI3-34-lhJ" firstAttribute="leading" secondItem="r7J-36-BlG" secondAttribute="leading" id="KCk-LX-f82"/>
+                                            <constraint firstAttribute="bottom" secondItem="bI3-34-lhJ" secondAttribute="bottom" constant="20" id="KsP-sz-R8m"/>
+                                            <constraint firstItem="bI3-34-lhJ" firstAttribute="top" secondItem="8AA-cd-ynE" secondAttribute="bottom" constant="10" id="b9n-gB-iRE"/>
+                                            <constraint firstItem="8AA-cd-ynE" firstAttribute="leading" secondItem="r7J-36-BlG" secondAttribute="leading" id="i1J-NY-AfD"/>
+                                            <constraint firstItem="8AA-cd-ynE" firstAttribute="top" secondItem="r7J-36-BlG" secondAttribute="top" id="nSc-ia-Rhj"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="r7J-36-BlG" firstAttribute="top" secondItem="ObO-oQ-ROR" secondAttribute="top" id="0PP-Wn-eud"/>
+                                    <constraint firstAttribute="trailing" secondItem="r7J-36-BlG" secondAttribute="trailing" id="Nfz-uE-6iv"/>
+                                    <constraint firstItem="r7J-36-BlG" firstAttribute="leading" secondItem="ObO-oQ-ROR" secondAttribute="leading" id="kGx-9B-hjd"/>
+                                    <constraint firstAttribute="bottom" secondItem="r7J-36-BlG" secondAttribute="bottom" id="lSp-L9-a7e"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ObO-oQ-ROR" secondAttribute="trailing" constant="-20" id="0gE-ZI-Gde"/>
+                            <constraint firstItem="r7J-36-BlG" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RM0-kt-Pb3"/>
+                            <constraint firstItem="ObO-oQ-ROR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="cmT-dJ-K45"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ObO-oQ-ROR" secondAttribute="bottom" id="hOg-Ck-9AI"/>
+                            <constraint firstItem="r7J-36-BlG" firstAttribute="height" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" id="t0x-Va-SVT"/>
+                            <constraint firstItem="ObO-oQ-ROR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="zmR-dG-okF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollContainer" destination="ObO-oQ-ROR" id="vGa-9o-mrd"/>
+                        <outlet property="scrollContainerBottom" destination="hOg-Ck-9AI" id="4NE-oK-ULb"/>
+                        <outlet property="textView" destination="bI3-34-lhJ" id="NRP-4n-8SS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="340" y="387"/>
         </scene>
     </scenes>
 </document>
